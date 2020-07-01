@@ -1,0 +1,82 @@
+<!-- Resources
+  Cubi Bezier generator: https://cubic-bezier.com/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 50px;
+      }
+
+      #container {
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        text-align: center;
+      }
+
+      #hexagon1 {
+        transition: transform 1s;
+      }
+
+      #hexagon1:hover {
+        transform: scale3d(1.2, 1.2, 1) rotate(45deg);
+      }
+
+      #hexagon2 {
+        transition: transform 1s ease;
+      }
+
+      #hexagon2:hover {
+        transform: scale3d(1.2, 1.2, 1) rotate(45deg);
+      }
+
+      #hexagon3 {
+        transition: transform 0.5s ease-in-out;
+      }
+
+      #hexagon3:hover {
+        transform: scale3d(1.2, 1.2, 1) rotate(45deg);
+      }
+
+      #hexagon4 {
+        transition: transform 1s ease-out;
+      }
+
+      #hexagon4:hover {
+        transform: scale3d(1.2, 1.2, 1) rotate(45deg);
+      }
+
+      #hexagon5 {
+        transition: transform 1s cubic-bezier(0.7, 0.35, 0.41, 0.78);
+      }
+
+      #hexagon5:hover {
+        transform: scale3d(1.2, 1.2, 1) rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p>Linear</p>
+      <img id="hexagon1" src="./assets/hexagon.svg" />
+      <br />
+      <p>Ease</p>
+      <img id="hexagon2" src="./assets/hexagon.svg" />
+      <br />
+      <p>Ease-In-Out</p>
+      <img id="hexagon3" src="./assets/hexagon.svg" />
+      <br />
+      <p>Ease-Out</p>
+      <img id="hexagon4" src="./assets/hexagon.svg" />
+      <br />
+      <p>Cubic Bezier</p>
+      <img id="hexagon5" src="./assets/hexagon.svg" />
+    </div>
+  </body>
+</html>
